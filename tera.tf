@@ -152,6 +152,8 @@ provisioner "remote-exec" {
   }
 }
 
+//Create_Bucket
+
 resource "aws_s3_bucket" "dhanraj1234"{
   bucket = "web-tera-bucket"
   acl    = "public-read"
@@ -165,6 +167,8 @@ resource "aws_s3_bucket" "dhanraj1234"{
 	}
 }
 
+//Bucket_Object
+
 resource "aws_s3_bucket_object" "object1"{
 
 	depends_on = [
@@ -177,6 +181,7 @@ resource "aws_s3_bucket_object" "object1"{
   content_type= "images or jpg"
 }	
 
+//Cloud_Distribution
 
 resource "aws_cloudfront_distribution" "cfd"{
   origin {
